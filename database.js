@@ -1,7 +1,14 @@
-let mongoose = require("mongoose");
+const mongoose = require('mongoose');
+const db       = 'mongodb://localhost/job_queue';
 
-//Connect to the database
-// mongoose.connect("mongodb://localhost/job_queue");  
+// In Mongoose .then() or .exec() does not guarantee true Promise in queries, 
+// hence I can use 'q' or 'bluebird'
+// Learn difference between promise/ async-await / callbacks and exec()
+
+mongoose.Promise = require('bluebird');
+
+//Connect to db job_queue
+mongoose.connect(db);  
 
 // Define Schema
 var jobQueueSchema = new mongoose.Schema({
@@ -15,29 +22,7 @@ var jobQueueSchema = new mongoose.Schema({
     responseHtml: String,
 });
 
-//Define Model
-// var JobEntry = mongoose.model("JobEntry", jobQueueSchema);
-
+//Define Model and Export it
 module.exports = mongoose.model("JobEntry", jobQueueSchema);
-    // JobEntry.create({
-    //     timeCreated: new Date(),
-    //     websiteToVisit: "www.google.com",
-    //     status: "Pending",
-    //     result: ""
-    // }, function(err, job) {
-    //     if(err){
-    //         console.log(err);
-    //     } else {
-    //         console.log("ID" , job._id);
-    //     }
-    // })
-
-
-// JobEntry.findOneAndUpdate({status: 'Done'}, {status: 'Error'}, function(err, res) {
-//     if (err) {
-//         console.log(err);
-//     } else {
-//         console.log(res);
-//     }
-// });
+    
 
