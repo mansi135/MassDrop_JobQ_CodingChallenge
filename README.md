@@ -49,7 +49,7 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
 
 
 * If there was an error in fetching url, user gets the following response-
-
+```
      {
         "status": "Error",
         "_id": "5abd5ba46aee19a57bfb4886",
@@ -57,10 +57,11 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
         "url": "https://www.twitr.com",
         "__v": 0
     }
+```
 
 * If incorrect jobID is provided, user gets the following response-
-
+```
     No job found
-
+```
 
  
