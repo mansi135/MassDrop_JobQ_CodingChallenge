@@ -35,7 +35,5 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
 * I used POSTMAN to verify my GET and POST requests
 
 
-<div align="center">
-    <img src="/Pending.png" width="400px"</img> 
-</div>
+![Alt text](./Pending.png) 
 
