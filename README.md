@@ -9,8 +9,8 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
 
 ## Table of Contents
 * [Setup](#setup)
-* [Technologies Used](#technologiesused)
-* [Testing](#testing)
+* [Tech Stack](#technologiesused)
+* [Testing Framework](#testing)
 * [Documentation and Usage](#docs)
 
 
@@ -29,6 +29,16 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
 * Testing : Mocha
 
 ## <a name="testing"></a>Testing Framework
+
+* Using Mocha and Chai's expect library
+* Make file test.js under test folder 
+* To run tests - 
+    - ./node_modules/mocha/bin/mocha    OR
+    - "scripts": {
+        "test": "mocha"         
+        }
+      npm test
+
 
 ## <a name="docs"></a>Documentation
 

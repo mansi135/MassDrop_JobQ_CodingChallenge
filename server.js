@@ -24,6 +24,11 @@ app.get("/jobs/status/:jobID", routeFunctions.getJobStatus)
  
 
 //Express App listens on Port 3000(local-host)
-app.listen(3000,function() {
+let server = app.listen(3000,function() {
   console.log("Server has started");
 });
+
+
+exports.closeServer = function(){
+  server.close();
+};

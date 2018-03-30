@@ -2,7 +2,7 @@ let JobEntry = require('./database.js');
 let urlRequest = require('request-promise');
 
 
-// Assigning things to future using 'then' is similar to spawning threads
+// Assigning things to future using 'then' is similar to spawning threads?
 exports.createJobEntry = function(req, res, next) {
    
    // Step1- save the new post request
@@ -48,7 +48,7 @@ exports.getJobStatus = function(req, res, next){
         res.send(returnedJob);
      })
      .catch(function(err) {
-        res.send("No job found");
+        res.status(404).send("No job found");
      })
 };
 
