@@ -9,6 +9,7 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
 
 ## Table of Contents
 * [Setup](#setup)
+* [Files](#files)
 * [Tech Stack](#technologiesused)
 * [Testing Framework](#testing)
 * [Documentation and Usage](#docs)
@@ -22,6 +23,15 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
 * cd into cloned directory
 * run node server.js
 
+## <a name="files"></a>Setup
+
+* server.js -> Main file where app and its routes are called
+* database.js -> Schema Design and connection to MongoDB
+* routeFunctions.js -> Get and Post methods defined here
+* test/test.js -> TestDB for integration tests and unit tests
+* package.json -> Defines all dependencies
+
+
 ## <a name="technologiesused"></a>Tech Stack
 
 * Database : MongoDB, Mongoose ODM
@@ -31,7 +41,7 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
 ## <a name="testing"></a>Testing Framework
 
 * Using Mocha, Supertest, Chai's expect library and Should
-* Make file test.js under test folder 
+* Made file test.js under test folder 
 * To run tests - 
     - ./node_modules/mocha/bin/mocha    OR
     - "scripts": {
