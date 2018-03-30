@@ -61,7 +61,6 @@ describe("Post a new job POST/", function() {
 })
 
 
-
 describe("Get a job status GET/", function() {
 
   mongoose.connect('mongodb://localhost/tstDB');
