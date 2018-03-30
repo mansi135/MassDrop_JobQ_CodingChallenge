@@ -26,18 +26,20 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
 
 * Database : MongoDB, Mongoose ODM
 * Server : Node.js, Express.js, bluebird Promises
-* Testing : Mocha
+* Testing : Mocha, Chai and Supertest
 
 ## <a name="testing"></a>Testing Framework
 
-* Using Mocha and Chai's expect library
+* Using Mocha, Supertest, Chai's expect library and Should
 * Make file test.js under test folder 
 * To run tests - 
     - ./node_modules/mocha/bin/mocha    OR
     - "scripts": {
+
         "test": "mocha"         
         }
-      npm test
+
+      npm test OR npm run tests  OR mocha
 
 
 ## <a name="docs"></a>Documentation

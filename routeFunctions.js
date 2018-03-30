@@ -5,6 +5,7 @@ let urlRequest = require('request-promise');
 // Assigning things to future using 'then' is similar to spawning threads?
 exports.createJobEntry = function(req, res, next) {
    
+
    // Step1- save the new post request
    // Return the db entry just created to future .then
     JobEntry.create({ timeCreated: new Date(),
@@ -48,7 +49,7 @@ exports.getJobStatus = function(req, res, next){
         res.send(returnedJob);
      })
      .catch(function(err) {
-        res.status(404).send("No job found");
+        res.status(404).json({'error' : 'No such jobID found'});
      })
 };
 

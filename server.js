@@ -8,12 +8,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 
-
 //Routes-
 
 //Welcome Route
 app.get("/", (req, res) =>
-    res.send("Welcome to Jobs Q"));
+    res.status(200).json({"msg" : "Welcome to Jobs Q"}));
 
 //Post new Job in the queue
 app.post("/jobs/url", routeFunctions.createJobEntry)
@@ -24,11 +23,9 @@ app.get("/jobs/status/:jobID", routeFunctions.getJobStatus)
  
 
 //Express App listens on Port 3000(local-host)
-let server = app.listen(3000,function() {
+app.listen(3000,function() {
   console.log("Server has started");
 });
 
-
-exports.closeServer = function(){
-  server.close();
-};
+//for testing in mocha
+module.exports = app;
