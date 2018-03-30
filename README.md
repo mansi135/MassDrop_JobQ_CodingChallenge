@@ -23,7 +23,7 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
 * cd into cloned directory
 * run node server.js
 
-## <a name="files"></a>Setup
+## <a name="files"></a>Files
 
 * server.js -> Main file where app and its routes are called
 * database.js -> Schema Design and connection to MongoDB
