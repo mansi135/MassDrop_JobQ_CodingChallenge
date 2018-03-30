@@ -60,14 +60,18 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
 ![GET Request](./Screenshots/Done.png)
 
 
-* If there was an error in fetching url, user gets the following response-
+* If there was an error in fetching url, user gets the following response with detailed error message in the response object itself-
+
+![GET Request](./Screenshots/Error.png)
 ```
      {
         "status": "Error",
-        "_id": "5abd5ba46aee19a57bfb4886",
-        "timeCreated": "2018-03-29T21:33:24.279Z",
-        "url": "https://www.twitr.com",
-        "__v": 0
+        "_id": "5abdfaa26535f7c469f4dbaf",
+        "timeCreated": "2018-03-30T08:51:46.904Z",
+        "url": "https://www.blhj.com",
+        "__v": 0,
+        "error": "Wrong URL or website down",
+        "error_details": "RequestError: Error: connect ECONNREFUSED 174.139.66.26:443"
     }
 ```
 
@@ -78,4 +82,9 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
     }
 ```
 
- 
+* If the user doesn't provide any 'url' key in post request, following response is generated-
+
+```
+    You must enter 'url' as key
+
+```
