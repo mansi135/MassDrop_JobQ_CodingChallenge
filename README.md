@@ -73,7 +73,9 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
 
 * If incorrect jobID is provided, user gets the following response-
 ```
-    No job found
+    {
+        "error": "No such jobID found"
+    }
 ```
 
  
