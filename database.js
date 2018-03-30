@@ -20,6 +20,8 @@ var jobQueueSchema = new mongoose.Schema({
         default: 'Pending'
     },
     responseHtml: String,
+    error: String,
+    error_details: String
 });
 
 //Define Model and Export it
