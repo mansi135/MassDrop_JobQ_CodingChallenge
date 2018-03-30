@@ -56,21 +56,25 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
 
  I used POSTMAN to verify my GET and POST requests
 
-* POST REQUEST - http://localhost:3000/jobs/url
+--------------------------------------------------------------------------------------------------------------------
+
+### POST REQUEST - http://localhost:3000/jobs/url
 
  This will create a new jobEntry in the database and returns the following response-
 
 ![POST Request](./Screenshots/Pending.png) 
 
+--------------------------------------------------------------------------------------------------------------------
 
-* GET REQUEST - http://localhost:3000/jobs/status/:jobID
+### GET REQUEST - http://localhost:3000/jobs/status/:jobID
 
  This will get the status of jobID- 
 
 ![GET Request](./Screenshots/Done.png)
 
+--------------------------------------------------------------------------------------------------------------------
 
-* If there was an error in fetching url, user gets the following response with detailed error message in the response object itself-
+### If there was an error in fetching url, user gets the following response with detailed error message in the response object itself-
 
 ![GET Request](./Screenshots/Error.png)
 ```
@@ -85,16 +89,23 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
     }
 ```
 
-* If incorrect jobID is provided, user gets the following response-
+--------------------------------------------------------------------------------------------------------------------
+
+### If incorrect jobID is provided, user gets the following response-
+
 ```
     {
         "error": "No such jobID found"
     }
 ```
 
-* If the user doesn't provide any 'url' key in post request, following response is generated-
+--------------------------------------------------------------------------------------------------------------------
+
+### If the user doesn't provide any 'url' key in post request, following response is generated-
 
 ```
     You must enter 'url' as key
 
 ```
+
+--------------------------------------------------------------------------------------------------------------------
