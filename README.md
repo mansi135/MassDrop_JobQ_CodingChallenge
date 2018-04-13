@@ -17,11 +17,13 @@ User submits www.google.com to your endpoint. The user gets back a job id. Your 
 
 ## <a name="setup"></a>Setup
 
-* requires npm install and mongodb installed prior to running this app
-* run mongod in some terminal
-* clone this directory 
-* cd into cloned directory
-* run node server.js
+* requires mongodb and redis installed prior to running this app
+* $ mongod (to run mongo server)
+* $ redis-server /usr/local/etc/redis.conf (to run redis server)
+* $ git clone this directory 
+* $ cd into cloned directory
+* $ npm install (this step will install all dependencies from package.json)
+* $ node server.js
 
 ## <a name="files"></a>Files
 
