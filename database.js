@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const db       = 'mongodb://localhost/job_queue';
 
+// job_queue is the name of database
+// JobEntry is one schema or one table
 // In Mongoose .then() or .exec() does not guarantee true Promise in queries, 
 // hence I can use 'q' or 'bluebird'
 // Learn difference between promise/ async-await / callbacks and exec()

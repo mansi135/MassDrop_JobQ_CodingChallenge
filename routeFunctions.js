@@ -1,8 +1,9 @@
 let JobEntry = require('./database.js');
 let urlRequest = require('request-promise');
+// let sleep = require('sleep');
 
 
-// Assigning things to future using 'then' is similar to spawning threads?
+
 exports.createJobEntry = function(req, res, next) {
    
     if (req.body.url === undefined) {
@@ -24,6 +25,7 @@ exports.createJobEntry = function(req, res, next) {
 
         //Step3- fetch the url and save the html in database
         .then(function(savedJob){
+               
               urlRequest(savedJob.url)    // Return html to future .then 
                 .then(function(responseHtml) {
                     savedJob.responseHtml = responseHtml;
@@ -38,7 +40,7 @@ exports.createJobEntry = function(req, res, next) {
                     savedJob.save();
                     // not sure if we need or should have following line here:
                     // next(err);
-                })
+                }) 
         })
 
         .catch(function(err) {
@@ -47,6 +49,7 @@ exports.createJobEntry = function(req, res, next) {
             // not sure if we need or should have following line here:
             // next(err);
         })
+        // console.log("first thing to b printed");
     }
 };
 
