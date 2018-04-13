@@ -11,8 +11,11 @@
   "dependencies": {
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
+    "bull": "^3.3.10",
     "chai": "^4.1.2",
     "express.js": "^1.0.0",
+    "kue": "^0.11.6",
+    "kue-scheduler": "^0.7.4",
     "mongoose": "^5.0.12",
     "request": "^2.85.0",
     "request-promise": "^4.2.2"

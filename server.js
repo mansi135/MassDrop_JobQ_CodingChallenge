@@ -2,7 +2,7 @@ let express     = require('express'),
     app         = express(),
     bodyParser  = require('body-parser');
 
-let routeFunctions = require('./routeFunctions.js');
+let routeFunctions = require('./routeFunctionsBull.js');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -15,6 +15,7 @@ app.get("/", (req, res) =>
 
 //Post new Job in the queue
 app.post("/jobs/url", routeFunctions.createJobEntry);
+
 
 //Get job status
 app.get("/jobs/status/:jobID", routeFunctions.getJobStatus);
